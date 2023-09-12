@@ -1,0 +1,317 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Cm Ngugi{% endblock %}
+{% block content %}
+ 
+    
+    <section class="intro-section">
+        <div class="intro-overlay"></div>
+        <div class="container">
+            <h1>Blog Details</h1>
+            <p>Welcome to our Law Blog, where knowledge meets justice. At Cm Ngugi, we're dedicated to 
+                providing you with insightful and informative articles on all aspects of the legal world. 
+                Whether you're seeking guidance on navigating complex legal matters, staying updated on the 
+                latest legal developments, or simply looking for expert advice, you've come to the right place. 
+                Our team of experienced attorneys and legal experts is here to empower you with the knowledge you
+                 need to make informed decisions. Explore our blog to discover articles that demystify legal 
+                 complexities and shed light on your rights and responsibilities. 
+                Join us on this journey as we unravel the intricate threads of the law and 
+                help you find your path to a more informed, empowered, and legally savvy future.</p>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 posts-list">
+                    <div class="single-post row">
+                        <div class="col-lg-12">
+                            <div class="feature-img">
+                                <img class="img-fluid" src="{{blog.image.url}}" alt="">
+                            </div>
+                        </div>
+                       
+                        <div class="col-lg-9 col-md-9 blog_details">
+                            <h2>{{blog.title}}</h2>
+                            {{blog.body|safe}}
+                           
+                        </div>
+                       
+                    </div>
+                    
+                    <div class="comments-area" style="background-color: white!important; color: black; border-radius: 2%; ">
+                        <h4>05 Comments</h4>
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex"style="border-color: black;">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/blog/c1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="desc">
+                                        <h5><a href="#">Emilly Blunt</a></h5>
+                                        <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a href="" class="btn-reply text-uppercase">reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-list left-padding">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/blog/c2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="desc">
+                                        <h5><a href="#">Elsie Cunningham</a></h5>
+                                        <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a href="" class="btn-reply text-uppercase">reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-list left-padding">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/blog/c3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="desc">
+                                        <h5><a href="#">Annie Stephens</a></h5>
+                                        <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a href="" class="btn-reply text-uppercase">reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/blog/c4.jpg' %}" alt="">
+                                    </div>
+                                    <div class="desc">
+                                        <h5><a href="#">Maria Luna</a></h5>
+                                        <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a href="" class="btn-reply text-uppercase">reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img src="{% static 'img/blog/c5.jpg' %}" alt="">
+                                    </div>
+                                    <div class="desc">
+                                        <h5><a href="#">Ina Hayes</a></h5>
+                                        <p class="date">December 4, 2017 at 3:12 pm </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a href="" class="btn-reply text-uppercase">reply</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-form" style="background-color: white!important; color: black; border-radius: 2%;">
+                        <h4>Leave a Reply</h4>
+                        <form style=" border-color:black ;">
+                            <div class="form-group form-inline" style=" border-color:black ;">
+                                <div class="form-group col-lg-6 col-md-6 name">
+                                    <input type="text" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter Name'" style=" border-color:rgb(172, 171, 171) ; ;">
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 email">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email address"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" style=" border-color:rgb(172, 171, 171) ; ;" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Subject'" style=" border-color:rgb(172, 171, 171) ; ;">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required="" style=" border-color:rgb(172, 171, 171) ;"></textarea >
+                            </div>
+                            <a href="#" class="primary-btn">Post Comment</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="background-color: white!important; color: black;">
+                    <div class="blog_right_sidebar">
+                        
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">Popular Posts</h3>
+                            {% for blog in all_blogs %}
+                            <div class="media post_item">
+                                <img src="{{blog.image.url}}" alt="post">
+                                <div class="media-body">
+                                    <a href="blog-details.html">
+                                        <h3>{{ blog.title }}</h3>
+                                    </a>
+                                    <p>{{blog.pub_date}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <div class="br"></div>
+                        </aside>
+                        
+                       
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <h4 class="widget_title">Post Catgories</h4>
+                            <ul class="list cat-list">
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Legal Basics</p>
+                                        <p>37</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Business Law</p>
+                                        <p>24</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Criminal Law</p>
+                                        <p>59</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Family Law</p>
+                                        <p>29</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Real Estate Law</p>
+                                        <p>15</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Estate Planning</p>
+                                        <p>09</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Immigration Law</p>
+                                        <p>44</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget newsletter_widget">
+                            <h4 class="widget_title" style="background-color: #333!important;">Newsletter</h4>
+                            <p>
+                                The Supreme Court has ruled in favor of protecting digital privacy rights, 
+                                setting a significant precedent for data privacy in the digital age.
+                            </p>
+                            <div class="form-group d-flex flex-row">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                </div>
+                                <a href="#" class="bbtns">Subcribe</a>
+                            </div>
+                            <p class="text-bottom">You can unsubscribe at any time</p>
+                            <div class="br"></div>
+                        </aside>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    
+@media (max-width: 768px) {
+	
+	.header_area .container {
+		background-color: #C09969!important;
+	}
+  } 
+		
+        
+.media img {
+    width: 100px; 
+    height: auto;
+}
+
+        .intro-section {
+            background-image: url('static/img/law/blog2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 40px 0;
+            text-align: left;
+            position: relative;
+        }
+    
+        .intro-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    
+        .intro-section h1,
+        .intro-section p {
+            color: #fff; 
+            mix-blend-mode: screen; 
+        }
+    
+        .intro-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    
+        .intro-section p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    
+        @media (max-width: 768px) {
+	.intro-section .container{
+		margin-top: 9% !important;
+	}
+	
+  } 
+    </style>
+   {% endblock %}

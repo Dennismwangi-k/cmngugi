@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Cm Ngugi{% endblock %}
+{% block content %}
+
+
+
+
+    <section class="intro-section">
+        <div class="intro-overlay"></div>
+        <div class="container" >
+            <h1 style="color: white  !important;">Premium Legal Services</h1>
+            <p style="color: white  !important;">With over 10 years of legal expertise, C.M Ngugi Rebiro &Co. Advocates desires to provide the finest legal options for you and your business.
+				 Maintaining close communication with our clients regarding any new updates on the case, and focusing on finding the best possible alternatives to your legal issues, 
+				 C.M Ngugi Rebiro &Co. Advocates will be able to
+				 help you navigate through any legal obstacles in Kenya and East Africa, using the most effective (and affordable!) path.</p>
+        </div>
+    </section>
+
+	
+
+    <section class="services">
+        <div class="container">
+            <div class="service">
+                <img src="{% static 'img/law/personalinjurylaw-scaled.jpeg' %}" alt="Service 1 Image">
+                <h2>Personal Injury</h2>
+                <p>Our knowledgeable team of personal injury attorneys will defend your rights and work to obtain you the compensation that you are due.</p>
+            </div>
+
+            <div class="service">
+                <img src="{% static 'img/law/criminal2.jpeg' %}" alt="Service 2 Image">
+                <h2>Criminal Defense</h2>
+                <p>Our criminal defense attorneys have a proven track record of successfully defending clients against criminal charges</p>
+            </div>
+
+            <div class="service">
+                <img src="{% static 'img/law/family-law.jpg' %}" alt="Service 3 Image">
+                <h2>Family Law</h2>
+                <p>We provide comprehensive family law services, including divorce, child custody, and child maintenance and spousal support cases.</p>
+            </div>
+
+            <div class="service">
+                <img src="{% static 'img/law/real estate.jpeg' %}" alt="Service 4 Image">
+                <h2>REAL ESTATE AND CONVEYANCING</h2>
+                <p>Our real estate lawyers assist clients with property transactions, contracts, and disputes.</p>
+            </div>
+
+            <div class="service">
+                <img src="{% static 'img/law/imigration.jpeg' %}" alt="Service 5 Image">
+                <h2>Immigration Law</h2>
+                <p>We offer immigration legal services, including visa applications, green card processing, and deportation defense.</p>
+            </div>
+
+            <div class="service">
+                <img src="{% static 'img/law/buisness.jpg' %}" alt="Service 6 Image">
+                <h2>Business Law</h2>
+                <p>Our business lawyers provide legal guidance on contracts, mergers, acquisitions, and business litigation.</p>
+            </div>
+
+            <div class="service">
+                <img src="{% static 'img/law/estateplanning.jpeg' %}" alt="Service 7 Image">
+                <h2>SUCCESSION AND ESTATE PLANNING</h2>
+                <p>We assist clients with estate planning, wills, trusts, and probate and administration matters to secure their family's future.</p>
+            </div>
+
+           
+
+            <div class="service">
+                <img src="{% static 'img/law/intellectual-property.jpg' %}" alt="Service 9 Image">
+                <h2>Intellectual Property</h2>
+                <p>We provide intellectual property services, including patent, trademark, and copyright registration and protection.</p>
+            </div>
+
+            <div class="service">
+                <img src="{% static 'img/law/Labour-And-Employment-Law-4.jpg' %}" alt="Service 10 Image">
+                <h2>LABOUR AND EMPLOYMENT LAW</h2>
+                <p>Our labour and employment lawyers offer legal advice on employment contracts, wrongful termination, discrimination cases, and workplace disputes.</p>
+            </div>
+        </div>
+    </section>
+
+   
+
+	
+
+  
+	<style>
+       
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 0 1 calc(30% - 20px);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .intro-section {
+        background-image: url('static/img/law/carousel-2.jpg'); 
+        background-size: cover;
+        background-position: center;
+        padding: 40px 0;
+        text-align: left;
+        position: relative;
+    }
+
+    .intro-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .intro-section h1,
+    .intro-section p {
+        color: #fff; 
+        mix-blend-mode: screen;
+    }
+
+    .intro-section h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .intro-section p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .service {
+            flex: 0 1 calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .service {
+            flex: 1 1 100%;
+        }
+    }
+	@media (max-width: 768px) {
+	.intro-section .container{
+		margin-top: 9% !important;
+	}
+	
+  } 
+  
+			@media (max-width: 768px) {
+	
+	.header_area .container {
+		background-color: #C09969!important;
+	}
+  } 
+		
+    </style>
+ {% endblock %}

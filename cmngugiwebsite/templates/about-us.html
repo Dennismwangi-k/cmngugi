@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Cm Ngugi{% endblock %}
+{% block content %}
+	</header>
+
+
+
+<section class="intro-section">
+    <div class="intro-overlay"></div>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>We are a reputable law practice with a track record of successfully representing our clients. With a 99% success rate in the cases we’ve handled, you can rely on us to offer expert legal counsel and representation.
+			Our firm of skilled advocates is dedicated to delivering justice and legal solutions. We pride ourselves in making a positive impact on the lives of our clients, ensuring they get the best support and counsel.
+			</p>
+    </div>
+</section>
+
+<section class="about-us-area section_gap_top" id="about" >
+    <div class="container">
+      
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <div class="single-about-us">
+                    <div class="about-image">
+                        <img src="{% static 'img/law/law.jpeg' %}" alt="Kenol Branch">
+                    </div>
+                    <div class="about-text">
+                        <h2>Our Kenol Branch</h2>
+                        <p>Welcome to C.M Ngugi Rebiro &Co. Advocates - Kenol Branch. Located in the heart of Kenol, we are committed to offering our clients in this area and the larger 
+							Mount Kenya region skilled legal services. Our team of experienced attorneys is committed to ensuring that you receive the best service and legal counsel.</p>
+                        <div class="branch-info">
+                            <h4>Contact Information:</h4>
+                            <p>Email: cmngugirebirokenol@gmail.com </p>
+                            <p>Phone: +254 745532754</p>
+                            <p>Address: Kenol Resource Plaza, 3rd Floor, Suite 3c
+								Kenol-Nyeri Highway
+								P.O Box 404-01020
+								KENOL
+								</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-lg-6">
+                <div class="single-about-us">
+                    <div class="about-image">
+                        <img src="{% static 'img/law/criminal.jpeg' %}" alt="Nairobi Branch">
+                    </div>
+                    <div class="about-text">
+                        <h2>Our Nairobi Branch</h2>
+                        <p>Welcome to C.M Ngugi Rebiro &Co. Advocates - Nairobi Branch. Situated in the bustling city of Nairobi, our office is here to serve all your legal needs. 
+							Our dedicated team of attorneys is passionate about making a positive impact on our clients' lives through expert legal advice and representation.</p>
+                        <div class="branch-info">
+                            <h4>Contact Information:</h4>
+                            <p>Email: c.m.ngugirebiro@gmail.com</p>
+                            <p>Phone: +254 722794567</p>
+                            <p>Address: Delta House, 4th Floor, Suite 423
+								University way, Opposite Central Police Station
+								P.O Box 6852-00200
+								NAIROBI
+								</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="row mt-5">
+            <div class="col-lg-12 text-center">
+                <h2>Meet Our Team</h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="{% static 'img/law/3.jpg' %}" alt="Team Member 1">
+                    </div>
+                    <div class="team-member-info">
+                        <h4>John Doe</h4>
+                        <p>Lead Attorney</p>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="col-lg-4 col-md-6">
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="{% static 'img/law/1.jpg' %}" alt="Team Member 2">
+                    </div>
+                    <div class="team-member-info">
+                        <h4>Jane Smith</h4>
+                        <p>Senior Attorney</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-lg-4 col-md-6">
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <img src="{% static 'img/law/0.jpg' %}" alt="Team Member 3">
+                    </div>
+                    <div class="team-member-info">
+                        <h4>Robert Johnson</h4>
+                        <p>Associate Attorney</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+	<style>	
+		.about-us-area {
+			background-color: #f8f8f8; 
+			padding: 80px 0; 
+			color: #000;
+		}
+		
+		.about-intro {
+			margin-bottom: 40px; 
+		}
+		
+		.about-text h2 {
+			font-size: 28px; 
+			color: #333; 
+			margin-bottom: 20px; 
+		}
+		
+		.about-text p {
+			font-size: 16px; 
+			line-height: 1.6; 
+			color: #666; 
+		}
+		
+		.branch-info h4 {
+			font-weight: bold; 
+			margin-top: 20px; 
+		}
+		
+		.branch-info p {
+			font-size: 14px; 
+			color: #777; 
+			margin-bottom: 10px; 
+		}
+		
+		
+		.team-member {
+			text-align: center; 
+			margin-bottom: 30px; 
+		}
+		
+		.team-member-image img {
+			border-radius: 50%; 
+			max-width: 100%;
+		}
+		
+		.team-member-info h4 {
+			font-size: 20px; 
+			margin-top: 15px; 
+		}
+		
+		.team-member-info p {
+			font-size: 16px; 
+			color: #444; 
+			margin-top: 10px; 
+		}
+
+	
+    .intro-section {
+        background-image: url('static/img/law/carousel-2.jpg'); 
+        background-size: cover;
+        background-position: center;
+        padding: 40px 0;
+        text-align: left;
+        position: relative;
+    }
+
+    .intro-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .intro-section h1,
+    .intro-section p {
+        color: #fff; 
+        mix-blend-mode: screen; 
+    }
+
+    .intro-section h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .intro-section p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+	@media (max-width: 768px) {
+	.intro-section .container{
+		margin-top: 9% !important;
+	}
+	
+  } 
+
+		
+		
+		@media (max-width: 768px) {
+			.about-us-area {
+				padding: 40px 0; 
+			}
+			
+			.about-text h2 {
+				font-size: 24px; 
+			}
+			
+			.about-text p {
+				font-size: 14px; 
+			}
+			
+			.branch-info h4 {
+				font-size: 16px; 
+			}
+			
+			.branch-info p {
+				font-size: 12px; 
+			}
+			
+			.team-member-info h4 {
+				font-size: 18px; 
+			}
+			
+			.team-member-info p {
+				font-size: 14px; 
+			}
+		}
+		@media (max-width: 768px) {
+	
+	.header_area .container {
+		background-color: #C09969!important;
+	}
+  } 
+	
+		
+		</style>
+ {% endblock %}

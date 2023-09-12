@@ -3,7 +3,12 @@ from .models import Blog
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    '''get the latest 3 blogs'''
+    blogs = Blog.objects.all().order_by('-id')[:3]
+    context = {
+        'blogs':blogs
+    }
+    return render(request, 'index.html',context)
 
 def about(request):
     return render(request, 'about-us.html') 

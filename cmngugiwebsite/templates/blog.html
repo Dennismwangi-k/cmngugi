@@ -7,28 +7,31 @@
         <div class="intro-overlay"></div>
         <div class="container">
             <h1>Blog</h1>
-            <p>Welcome to our law blog, where justice and wisdom collide. We at C.M Ngugi Rebiro & Co. 
-				Advocates are committed to giving you enlightening and educational articles on all facets 
-				of the legal industry. You've come to the perfect place, whether you need assistance with complicated legal issues, 
-				want to remain current on the most recent legal developments, or just want expert advice. Our team of knowledgeable lawyers 
-				and legal professionals are here to arm you with the information you need to make wise decisions. Explore our blog to find articles 
-				that clarify legal jargon and explain your rights and obligations. Join us on this fascinating journey as we untangle 
-				the complex webs of the law and assist you in finding your way to a more knowledgeable, empowered, and legally savvy future.</p>
+            <p> Welcome to C.M Ngugi Rebiro & Co. Advocates' law blog, 
+                where we demystify the legal world. Whether you seek clarity on 
+                legal matters, want updates on legal trends, or need expert insights, 
+                you're in the right place. Our team provides articles to guide your decisions, 
+                clarify legal terms, and empower you with knowledge. Dive in and become legally 
+                enlightened.</p>
         </div>
     </section>
 
     <div class="blog-card-container">
 		{% for blog in blogs %}
-        <div class="blog-card">
+        
+        <div class="blog-card" data-url="{% url 'blogpost' blog.id %}">
             <div class="blog-image">
-                <img src="{{blog.image.url}}" alt="Blog Image 1">
+                
+                    <img src="{{blog.image.url}}" alt="Blog Image 1">
+                
             </div>
             <div class="blog-content">
-                <h2>{{blog.title}}</h2>
-                <p>{{ blog.body|truncatewords:20|safe}}</p>
-                <a href="{% url 'blogpost' blog.id %}">Read More</a>
+                {{blog.title}}</h2>
+                <p style="color:black !important">{{ blog.body|truncatewords:20|safe}}</p>
+                <a href="{% url 'blogpost' blog.id %}" style="color: black">Read More</a>
             </div>
         </div>
+    
 		{% endfor %}
     </div>
   
@@ -97,8 +100,16 @@
 .blog-content a:hover {
     background-color: #0056b3;
 }
-    
+  
+
+
+
+
 .intro-section {
+    height: 20vh; 
+	
+}
+	.intro-section {
             background-image: url('static/img/law/blog2.jpg'); 
             background-size: cover;
             background-position: center;
@@ -120,17 +131,22 @@
 .intro-section p {
             color: #fff; 
             mix-blend-mode: screen; 
+
 }
     
 .intro-section h1 {
-            font-size: 36px;
+            font-size: 26px;
             margin-bottom: 20px;
+			margin-top: -3%;
 }
     
 .intro-section p {
-            font-size: 18px;
-            margin-top: 20px;
+            font-size: 16px;
+			margin-top: -1%;
+			justify-content: center;
+			
 }
+
     
         @media (max-width: 768px) {
 	.intro-section .container{
@@ -145,7 +161,29 @@
 		background-color: #C09969!important;
 	}
   } 
+
+  .blog-card {
+    cursor: pointer;
+}
+
+.blog-card a {
+    text-decoration: none;
+    color: inherit; 
+}
+
 		
     </style>
 	
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.blog-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            window.location.href = card.getAttribute('data-url');
+        });
+    });
+});
+
+    </script>
 	{% endblock %}

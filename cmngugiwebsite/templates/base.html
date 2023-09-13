@@ -30,7 +30,7 @@
 			
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
+					
 					<a class="navbar-brand logo_h" href="{% url 'index' %}"><h3>CM NGUGI ADVOCATES</h3></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,16 +38,17 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
+                    {% with current_url=request.resolver_match.url_name %}
+
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-							<li class="nav-item "><a class="nav-link" href="{% url 'about' %}">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Service</a></li>
+							<li class="nav-item {% if current_url == 'index' %}active{% endif %}" ><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+							<li class="nav-item {% if current_url == 'about' %}active{% endif %}"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+							<li class="nav-item {% if current_url == 'services' %}active{% endif %}"><a class="nav-link" href="{% url 'services' %}">Service</a></li>
 							
 							
-							<li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
-							<li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+							<li class="nav-item {% if current_url == 'blog' %}active{% endif %}"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+							<li class="nav-item {% if current_url == 'contact' %}active{% endif %}"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
 						</ul>
 						<ul class="nav navbar-nav ml-auto">
 							<div class="social-icons d-flex align-items-center">
@@ -67,6 +68,7 @@
 							
 						</ul>
 					</div>
+                    {% endwith %}
 				</div>
 			</nav>
 		</div>
@@ -78,54 +80,72 @@
     {% endblock content %}  
 
     <footer class="footer-area">
-        <div class="footer_top section_gap_top">
+        <div class="footer_top section_gap_top" style="padding: 20px 0;"> 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
-                            <h5 class="footer_title">About Law</h5>
-                            <p class="about-text">The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point where images and videos are used more to </p>
+                            <h5 class="footer_title" style="font-size: 18px;">About Law</h5> 
+                            <p class="about-text" style="font-size: 14px;">The world has become so fast paced that people don’t want to stand by reading a page of information...</p> <!-- Reduced font size for the paragraph -->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h5 class="footer_title">Navigation Links</h5>
-                            <div class="row">
-                                <div class="col-6">
-                                    <ul class="list">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services</a></li>	
-                                    </ul>
-                                </div>
-                                <div class="col-6">
-                                    <ul class="list">								
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <h5 style="font-size: 18px;">Contact Info</h5> 
+                        <div style="font-size: 14px;"> 
+                            <i class="fas fa-headset"></i>
+                            <span>Phone: +25472279456, +254745532754</span>
+                        </div>
+                        <div style="font-size: 14px;"> 
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>c.m.ngugirebiro@gmail.com</span>
+                        </div>
+                        <div style="font-size: 14px;">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Delta House, 4th Floor, Suite 423
+                                  University way, NAIROBI
+                                  </span>
                         </div>
                     </div>
+    
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
-                            <h5>Determined</h5>
-                            <p>Protecting lives by defending lives is what we call hobby in our firm, feel secured enough when you come to us </p>
+                            <h5 class="footer_title" style="font-size: 18px;">Determined</h5> 
+                            <p style="font-size: 14px;">Protecting lives by defending lives is what we call hobby in our firm, feel secured enough when you come to us </p> <!-- Reduced font size for the paragraph -->
                         </div>
                     </div>
+    
                     <div class="col-lg-3 col-md-6 col-sm-6 map-column">
-                        <h5 class="footer_title">Location</h5>
-                        <div id="mapBox" class="mapBox" style="height: 150px; overflow: hidden;" data-lat="-0.688036" data-lon="37.156908" data-zoom="13" data-info="Kenol, Kenya">
-                            <!-- Your map code will go here -->
-                            <img src="{% static 'path_to_map_placeholder_image.jpg' %}" alt="Map Placeholder" class="map-thumbnail" style="max-height: 100%; width: auto;">
+                        <h5 class="footer_title" style="font-size: 18px;">Location</h5>
+                        <div class="responsive-map-container-footer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.36417784045!2d36.81617!3d-1.282729!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d23845cda7%3A0x63f2172145a7defe!2sC.%20M.%20NGUGI%20REBIRO%20%26%20CO.!5e0!3m2!1sen!2sus!4v1631573141321!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
+                <div style="text-align: center; margin-top: 15px;"> 
+                    Built by <a href="https://njaneweb.com" target="_blank">njane labs</a>
+                </div>
             </div>
         </div>
-    </footer> 
+    </footer>
     
+
         
 <style>
+
+     .responsive-map-container-footer {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;  
+    }
+
+    .responsive-map-container-footer iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       
+    }
     body, h1, h2,h3, p, ul, li, a {
       font-family: "Calibri", sans-serif, "Roboto", sans-serif !important;
       
@@ -149,7 +169,7 @@
 	<script src="{% static 'vendors/counter-up/jquery.waypoints.min.js' %}"></script>
 	<script src="{% static 'vendors/counter-up/jquery.counterup.js' %}"></script>
 	<script src="{% static 'js/mail-script.js' %}"></script>
-	<!--gmaps Js-->
+	
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="{% static 'js/gmaps.min.js' %}"></script>
 	<script src="{% static 'js/theme.js' %}"></script>
@@ -168,12 +188,12 @@
             testimonialCards[currentIndex].classList.add("next");
           }
         
-          // Show the initial testimonials
+        
           for (let i = 0; i < 4; i++) {
             showTestimonials();
           }
         
-          // Automatically slide testimonials every 3 seconds
+          
           setInterval(function () {
             testimonialCards[currentIndex].classList.remove("active");
             testimonialCards[currentIndex].classList.remove("next");
@@ -183,7 +203,7 @@
         
         </script>
         <script>
-            // script.js (Optional)
+           
     
     const serviceCards = document.querySelectorAll('.service-card');
     

@@ -187,41 +187,6 @@
 	  </div>
 	</div>
   </section>
-	
-<header class="navheader"  style="background-color: #333; color: #fff!important; margin-top: 1%; margin-bottom: 1%;">
-    <h1 style="margin: 0; color: #fff!important;">Explore Our Latest Blog Posts</h1>
-    <p style="font-size: 18px; color: #fff;">Stay updated with our insightful articles on various topics. Discover valuable insights and interesting stories.</p>
-</header>
-
-
-<section class="section_gap blog_area" style="background-color: #333; color: #000!important; font-family: sans-serif!;">
-    <div class="container">
-      
-
-        <div class="row justify-content-center mt-5">
-            {% for latest_blogs in blogs %}
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="single-blog" style="background-color: white; border-radius: 15px; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
-                    <div class="blog-thumb">
-                        <img class="img-fluid" src="{{latest_blogs.image.url}}" alt="">
-                    </div>
-                    <div class="blog-details">
-                        <h5><a href="#" style="color: #333; text-decoration: none;">{{latest_blogs.title}}</a></h5>
-                        <p style="color: #666;">{{ latest_blogs.body|truncatewords:10|safe }}</p>
-                    </div>
-                    
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-4 col-md-4 col-sm-6 text-center">
-                <a href="{% url 'blog' %}" class="btn btn-primary btn-lg">Read More</a>
-            </div>
-        </div>
-    </div>
-</section>
 
 	<header class="navheader"  style="background-color: #333; color: #fff!important; margin-top: 1%;">
 		<h1 style="margin: 0; color: #fff!important;">Client Testimonials</h1>

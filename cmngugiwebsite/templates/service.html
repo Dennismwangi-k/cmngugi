@@ -8,7 +8,7 @@
 
     <section class="intro-section">
         <div class="intro-overlay"></div>
-        <div class="container" >
+        <div class="servicecontainer" >
             <h1 style="color: white  !important;">Premium Legal Services</h1>
             <p style="color: white  !important;">With a decade of experience, C.M Ngugi Rebiro &Co. Advocates 
                 offers premier legal solutions for you and your business. We prioritize open communication about 
@@ -20,7 +20,7 @@
 	
 
     <section class="services">
-        <div class="container">
+        <div class="servicecontainer">
             <div class="service">
                 <img src="{% static 'img/law/personalinjurylaw-scaled.jpeg' %}" alt="Service 1 Image">
                 <h2>Personal Injury</h2>
@@ -99,7 +99,31 @@
 	<style>
        
 
-        .container {
+
+@media (max-width: 768px) {
+    .intro-section {
+        height: auto; 
+        padding: 10% 0; 
+    }
+
+    .intro-section h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .intro-section p {
+        font-size: 14px;
+        margin-top: 0;
+        text-align: center; 
+    }
+
+    .intro-section .servicecontainer {
+        margin-top: 5% !important;
+    }
+}
+
+        .servicecontainer {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -144,7 +168,8 @@
 
     
 .intro-section {
-    height: 20vh; 
+    height: auto;  
+    padding: 5% 0; 
 	
 }
 	.intro-section {
@@ -196,7 +221,7 @@
         }
     }
 	@media (max-width: 768px) {
-	.intro-section .container{
+	.intro-section .servicecontainer{
 		margin-top: 9% !important;
 	}
 	

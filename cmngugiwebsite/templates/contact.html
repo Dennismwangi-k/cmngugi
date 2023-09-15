@@ -23,39 +23,113 @@
         <section class="contact_us">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 offset-md-1">
+                    <div class="col-md-6"> 
                         <div class="contact_inner">
+                            <h2 class="branch-title" style="justify-content: center; text-align: center;">Nairobi Branch</h2>
+                            
                             <div class="contact_info_sec">
-                                <h4 style="color:#f7f7f7">Contact Info</h4>
-                                <div class="info_single align-items-center justify-content-center">
+                                
+                                <div class="info_single align-items-left justify-content-left">
                                     <i class="fas fa-headset"></i>
-                                    <span>0722 896467</span>
+                                    <span>+254 722794567</span>
                                 </div>
-                                <div class="info_single align-items-center justify-content-center">
+                                <div class="info_single align-items-left justify-content-left">
                                     <i class="fas fa-envelope-open-text"></i>
                                     <span>c.m.ngugirebiro@gmail.com</span>
                                 </div>
-                                <div class="info_single align-items-center justify-content-center">
+                                <div class="info_single align-items-left justify-content-left">
                                     <i class="fas fa-map-marked-alt"></i>
-                                    <span>Delta House, 4th Floor, Suite 423
-										University way, NAIROBI</span>
+                                    <span>Delta House, 4th Floor, Suite 423 University way, Opposite Central Police Station P.O Box 6852-00200 NAIROBI</span>
                                 </div>
-                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6"> 
+                        <div class="contact_inner">
+                            <h2 class="branch-title" style="text-align: center;">Kenol Branch</h2>
+                            
+                            <div class="contact_info_sec">
+                                
+                                <div class="info_single align-items-left justify-content-left">
+                                    <i class="fas fa-headset"></i>
+                                    <span>+254 745532754</span>
+                                </div>
+                                <div class="info_single align-items-letf justify-content-left">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                    <span>cmngugirebirokenol@gmail.com</span>
+                                </div>
+                                <div class="info_single align-items-left justify-content-left">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span>Kenol Resource Plaza, 3rd Floor, Suite 3c Kenol-Nyeri Highway P.O Box 404-01020 KENOL</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>    
+        </section>
+    </div>
+</section>
+    
         
-        <div class="responsive-map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.36417784045!2d36.81617!3d-1.282729!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d23845cda7%3A0x63f2172145a7defe!2sC.%20M.%20NGUGI%20REBIRO%20%26%20CO.!5e0!3m2!1sen!2sus!4v1631573141321!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+<div class="map-container">
+    <div class="map-container-single">
+        
+      
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8224091405978!2d36.816075674183274!3d-1.2802076356178622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d345e36ab3%3A0x6be285ea29e59a04!2sDelta%20House%20University%20Way%20-%20A3!5e0!3m2!1sen!2ske!4v1694768816005!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+    </div>
+        
+    <div class="map-container-single">
+        
+            
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2807041240885!2d37.121992174181194!3d-0.9405938353443509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1828b3563be6ecf5%3A0xf7ad12ff648185a3!2sResource%20Plaza!5e0!3m2!1sen!2ske!4v1694769064215!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+      
+        
+    </div>
+</div>
+
+        
         
     </div>
 </section>
 
+
 <style>
+  .map-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: -12%;
+    width: 84%;
+    margin-left: 8%;
+}
+
+
+
+.map-container-single {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 300px;  
+    position: relative;
+    padding: 2%;
+    margin: 2%;
+}
+
+.map-container-single iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+}
+
+
 .intro-section {
     height: auto;  
     padding: 1% 0; 
@@ -69,6 +143,19 @@
 }
 
 @media (max-width: 768px) {
+    .map-container {
+    flex-direction: column;
+   height: 80%;
+    
+}
+
+.map-container-single {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2%;
+    height: 300px;  
+}
+
     .intro-section .container {
         margin-top: 3% !important;  
     }
@@ -141,8 +228,20 @@
 	.intro-section .container{
 		margin-top: 9% !important;
 	}
-	
+    .contact_inner {
+        margin-top: 2% ;
+        text-align: left;
+        justify-content: left;
+        justify-self: left;
+    }
+
+    .contact_inner {
+    padding: 30px!important;
+    }
 }
+	
+   
+
 .contact_inner {
     background-color: #f7f7f7;
     border-radius: 15px;
@@ -154,7 +253,8 @@
     border-radius: 15px;
     padding: 40px;
     color: white;
-    text-align: center;
+    text-align: left !important;
+    
 }
 .contact_info_sec h4 {
     font-size: 28px;
@@ -163,8 +263,8 @@
 }
 .info_single {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
         margin: 20px 0;
         font-size: 18px;
     }
@@ -192,9 +292,17 @@
 
     @media screen and (max-width: 768px) {
         .contact_info_sec {
-            padding: 20px;
+            padding: 1px;
+
         }
     }
+    
+			@media (max-width: 768px) {
+	
+	.header_area .container {
+		background-color: #C09969!important;
+	}
+  } 
 </style>
 
 {% endblock %}
